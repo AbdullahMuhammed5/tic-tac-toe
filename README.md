@@ -1,4 +1,4 @@
-# Python Coffee Machine Program 
+# Python Tic tac toe Game
 
 This is a program that the famous Tic Tac Toe game, built by python3. 
 
