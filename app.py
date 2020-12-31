@@ -72,6 +72,7 @@ def print_board(metrix):
     finished = True
 
 
+print("Notice: Coordinates are integers that represents the position for every cell of the board,\n separated by space (ex: 1 2 or 3 2)")
 print_board(metrix)
 player = "X"
 
