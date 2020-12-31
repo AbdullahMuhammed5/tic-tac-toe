@@ -61,12 +61,6 @@ def print_board(metrix):
     print('|\n' if row != metrix[-1] else '|')
   print_line()
 
-  # if winner("X", metrix) and winner("O", metrix) or \
-  #         cells.count("X") - cells.count("O") > 1 or cells.count("O") - cells.count("X") > 1:
-  #   print("Impossible")
-  # else:
-  # if search("_", metrix) and no_winners(metrix):
-  #   print("Game not finished")
   if winner("X", metrix):  # case X wins
     print("X wins")
     finished = True
@@ -82,7 +76,7 @@ print_board(metrix)
 player = "X"
 
 while search("_", metrix) and not finished:
-  player_inputs = input("Enter the coordinates").split(' ')
+  player_inputs = input("Enter the coordinates: ").split(' ')
 
   if [x for x in player_inputs if not x.isnumeric()]:
     print("You should enter numbers!")
@@ -100,14 +94,4 @@ while search("_", metrix) and not finished:
       "".join(metrix[row - 1])
       print_board(metrix)
       player = "X" if player == "O" else "O"
-
-"""
-1- take inputs -> split to array 
-2- check if either sides wins:
-  a.full row
-  b.full column
-  c.full diagonal
-3- check if draw -> board capacity is full and no win
-4- check if impossible -> one player have 2 more play over the other
-"""
 
